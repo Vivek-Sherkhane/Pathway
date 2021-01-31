@@ -1,0 +1,92 @@
+
+<%- include("partials/header") -%>
+<style>
+  body{
+    background-image:  url("./images/bg.jpg");
+    /* color : black; */
+  }
+  .dropbtn {
+  background-color:black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left : 45%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  text-align:center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content p{
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#fff;
+color: black;}
+</style>
+<div class="head container-fluid">
+<img src="https://www.designmantic.com/logo-images/10497.png?company=Company+Name&slogan=&verify=1">
+<h1 class="heading">PATHWAY</h1>
+<div class="dropdown">
+    <button class="dropbtn">USER</button>
+    <div class="dropdown-content">
+      <p> <%=name%> </p>
+      <a href="/home">Logout</a>
+    </div>
+  </div>
+</div>
+
+  <div class="turn" >
+   <a href="/main"><p style="color:black">HOME</p></a>
+   <a href="/compose"><p style="color:black">COMPOSE</p></a>
+   <a href="/blog"><p style="color:black">BLOG</p></a>
+   <a href="/quiz"><p style="color:black">ROADMAP</p></a>
+   <!-- <a href="/path"><p style="color:black">ROADMAP</p></a> -->
+  </div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.turn{
+  padding-top:3%;
+  text-align:center;
+}
+p{
+  font-size:3rem;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
+p:hover a:hover{
+  color: black;
+}
+</style>
+
+  <%- include("partials/footer") -%>

@@ -1,0 +1,172 @@
+<%- include("partials/header") -%>
+<style>
+
+  body{
+    background-image : url("./images/bg.jpg");
+  }
+
+  h1{
+    margin-left:6%;
+    margin-top:2%;
+    font-size: 50px;
+
+  }
+
+  .dropbtn {
+  background-color:black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left : 45%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  text-align:center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content p{
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#fff;
+color: black;}
+
+.cont{
+    display: inline-block;
+    width:40%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:2%;
+    box-shadow : 0 5px 7px 3px rgba(0,0,0,0.5);
+}
+.quiz-container{
+  background-color: white;
+  width: 70%;
+  border: 1px solid black;
+  position: relative;
+  left: 5%;
+  top: 4%;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow : 0 5px 7px 3px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+}
+p{
+  display: inline-block;
+}
+
+.question{
+  font-weight: bold;
+}
+
+.btn{
+  padding: 10px;
+  position : relative;
+  left: 90%;
+}
+.btn:hover{
+  background-color: white;
+  color: black;
+}
+
+</style>
+<div class="head container-fluid">
+<img src="https://www.designmantic.com/logo-images/10497.png?company=Company+Name&slogan=&verify=1">
+<h1 class="heading">PATHWAY</h1>
+<div class="dropdown">
+    <button class="dropbtn">USER</button>
+    <div class="dropdown-content">
+      <p> <%=name%> </p>
+      <a href="/home">Logout</a>
+    </div>
+  </div>
+</div>
+      <h1>QUIZ</h1>
+    <div class="quiz-container">
+      <form class="" action="/quiz" method="post">
+      <div class="q1">
+        <p class="question">1. select your current college year. </p><br />
+        <input class="que1" type="checkbox" name="q1Value" value="1" >
+        <p class="option">1st</p><br />
+        <input class="que1" type="checkbox" name="q1Value" value="2" >
+        <p class="option">2nd</p><br />
+        <input class="que1" type="checkbox" name="q1Value" value="3" >
+        <p class="option" >3rd</p><br />
+        <input class=" que1"  type="checkbox" name="q1Value" value="4" >
+        <p class="option" >4th</p><br />
+      </div>
+      <div class="q2">
+        <p  class="question">2. select Programming language you know </p><br />
+        <input class=" que2" type="checkbox" name="q2Value" value="C++" >
+        <p  class="option">C++</p><br />
+        <input class=" que2" type="checkbox" name="q2Value" value="JAVA" >
+        <p class="option">JAVA</p><br />
+        <input class=" que2" type="checkbox" name="q2Value" value="PYTHON" >
+        <p class="option">PYTHON</p><br />
+        <input class=" que2" type="checkbox" name="q2Value" value="NONE OF THE ABOVE">
+        <p class="option">NONE OF THE ABOVE</p><br />
+      </div>
+      <div class="q3">
+        <p class="question">3. Skills you want to learn</p><br />
+        <input class=" que3" type="checkbox" name="q3Value" value="WEB DEVELOPMENT">
+        <p class="option">WEB DEVELOPMENT</p><br />
+        <input class=" que3" type="checkbox" name="q3Value" value="APP DEVELOPMENT">
+        <p class="option">APP DEVELOPMENT</p><br />
+        <input class=" que3" type="checkbox" name="q3Value" value="MACHINE LEARNING">
+        <p class="option">MACHINE LEARNING</p><br />
+        <input class=" que3" type="checkbox" name="q3Value" value="BLOCK-CHAIN">
+        <p class="option">BLOCK-CHAIN</p><br />
+      </div>
+      <div class="q4">
+        <p class="question">4. select your programming level </p><br />
+        <input class=" que4" type="checkbox" name="q4Value" value="BEGINNER">
+        <p class="option">BEGINNER</p><br />
+        <input class=" que4" type="checkbox" name="q4Value" value="INTERMEDIATE">
+        <p class="option">INTERMEDIATE</p><br />
+        <input class=" que4" type="checkbox" name="q4Value" value="ADVANCE">
+        <p class="option">ADVANCE</p><br />
+      </div>
+      <div class="q5">
+        <p class="question">5. What are you aiming for? </p><br />
+        <input class=" que5" type="checkbox" name="q5Value" value="PAG">
+        <p class="option">placement after graduation</p><br />
+        <input class=" que5" type="checkbox" name="q5Value" value="POST-GRADUATION">
+        <p class="option">go for post-graduation</p><br />
+        <input class=" que5" type="checkbox"  name="q5Value" value="START-UP">
+        <p class="option">start-Up</p><br />
+        <button class="btn" name="login-btn" type="submit">SUBMIT</button>
+      </div>
+      </form>
+    </div>
+    <script src="javascript.js" charset="utf-8"></script>
+  </body>
+</html>
